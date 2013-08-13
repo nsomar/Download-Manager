@@ -9,7 +9,6 @@
 #import "IASequentialDownloadManager.h"
 #import "IASequentialDownloadHandler.h"
 #import "IADownloadOperation.h"
-#import "LoggerClient.h"
 
 @interface IASequentialDownloadManager()
 

@@ -7,11 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0707C29717ADD4B000840825 /* IASequentialDownloadHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 0707C29617ADD4B000840825 /* IASequentialDownloadHandler.m */; };
-		071AE59A17AC301A0028CBDA /* IADownloadHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 071AE59517AC301A0028CBDA /* IADownloadHandler.m */; };
-		071AE59B17AC301A0028CBDA /* IADownloadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 071AE59717AC301A0028CBDA /* IADownloadManager.m */; };
-		071AE59C17AC301A0028CBDA /* IADownloadOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 071AE59917AC301A0028CBDA /* IADownloadOperation.m */; };
-		071AE5A317AC325E0028CBDA /* IASequentialDownloadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 071AE5A217AC325E0028CBDA /* IASequentialDownloadManager.m */; };
+		0712338B17BACE4C00808C6A /* IACacheManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0712338017BACE4C00808C6A /* IACacheManager.m */; };
+		0712338C17BACE4C00808C6A /* IADownloadHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 0712338217BACE4C00808C6A /* IADownloadHandler.m */; };
+		0712338D17BACE4C00808C6A /* IADownloadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0712338417BACE4C00808C6A /* IADownloadManager.m */; };
+		0712338E17BACE4C00808C6A /* IADownloadOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 0712338617BACE4C00808C6A /* IADownloadOperation.m */; };
+		0712338F17BACE4C00808C6A /* IASequentialDownloadHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 0712338817BACE4C00808C6A /* IASequentialDownloadHandler.m */; };
+		0712339017BACE4C00808C6A /* IASequentialDownloadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0712338A17BACE4C00808C6A /* IASequentialDownloadManager.m */; };
 		076910D217ABDE5B00439E30 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 076910D117ABDE5B00439E30 /* UIKit.framework */; };
 		076910D417ABDE5B00439E30 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 076910D317ABDE5B00439E30 /* Foundation.framework */; };
 		076910D617ABDE5B00439E30 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 076910D517ABDE5B00439E30 /* CoreGraphics.framework */; };
@@ -37,23 +38,23 @@
 		0769111A17ABDEBC00439E30 /* EGOCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 0769110E17ABDEBC00439E30 /* EGOCache.m */; };
 		0769111F17ABE59B00439E30 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0769111E17ABE59B00439E30 /* CFNetwork.framework */; };
 		0769112117ABE5A000439E30 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0769112017ABE5A000439E30 /* Security.framework */; };
-		076A0E8B17ABF74500BDDA96 /* LoggerClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 076A0E8917ABF74500BDDA96 /* LoggerClient.m */; };
 		076A0E8D17ABF77500BDDA96 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 076A0E8C17ABF77500BDDA96 /* SystemConfiguration.framework */; };
 		076A0E9017AC014F00BDDA96 /* ImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 076A0E8F17AC014F00BDDA96 /* ImageCell.m */; };
-		078CCEB717B1B00900E6F573 /* IACacheManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 078CCEB617B1B00900E6F573 /* IACacheManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0707C29517ADD4B000840825 /* IASequentialDownloadHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IASequentialDownloadHandler.h; sourceTree = "<group>"; };
-		0707C29617ADD4B000840825 /* IASequentialDownloadHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IASequentialDownloadHandler.m; sourceTree = "<group>"; };
-		071AE59417AC301A0028CBDA /* IADownloadHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IADownloadHandler.h; sourceTree = "<group>"; };
-		071AE59517AC301A0028CBDA /* IADownloadHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IADownloadHandler.m; sourceTree = "<group>"; };
-		071AE59617AC301A0028CBDA /* IADownloadManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IADownloadManager.h; sourceTree = "<group>"; };
-		071AE59717AC301A0028CBDA /* IADownloadManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IADownloadManager.m; sourceTree = "<group>"; };
-		071AE59817AC301A0028CBDA /* IADownloadOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IADownloadOperation.h; sourceTree = "<group>"; };
-		071AE59917AC301A0028CBDA /* IADownloadOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IADownloadOperation.m; sourceTree = "<group>"; };
-		071AE5A117AC325E0028CBDA /* IASequentialDownloadManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IASequentialDownloadManager.h; sourceTree = "<group>"; };
-		071AE5A217AC325E0028CBDA /* IASequentialDownloadManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IASequentialDownloadManager.m; sourceTree = "<group>"; };
+		0712337F17BACE4C00808C6A /* IACacheManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IACacheManager.h; sourceTree = "<group>"; };
+		0712338017BACE4C00808C6A /* IACacheManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IACacheManager.m; sourceTree = "<group>"; };
+		0712338117BACE4C00808C6A /* IADownloadHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IADownloadHandler.h; sourceTree = "<group>"; };
+		0712338217BACE4C00808C6A /* IADownloadHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IADownloadHandler.m; sourceTree = "<group>"; };
+		0712338317BACE4C00808C6A /* IADownloadManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IADownloadManager.h; sourceTree = "<group>"; };
+		0712338417BACE4C00808C6A /* IADownloadManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IADownloadManager.m; sourceTree = "<group>"; };
+		0712338517BACE4C00808C6A /* IADownloadOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IADownloadOperation.h; sourceTree = "<group>"; };
+		0712338617BACE4C00808C6A /* IADownloadOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IADownloadOperation.m; sourceTree = "<group>"; };
+		0712338717BACE4C00808C6A /* IASequentialDownloadHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IASequentialDownloadHandler.h; sourceTree = "<group>"; };
+		0712338817BACE4C00808C6A /* IASequentialDownloadHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IASequentialDownloadHandler.m; sourceTree = "<group>"; };
+		0712338917BACE4C00808C6A /* IASequentialDownloadManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IASequentialDownloadManager.h; sourceTree = "<group>"; };
+		0712338A17BACE4C00808C6A /* IASequentialDownloadManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IASequentialDownloadManager.m; sourceTree = "<group>"; };
 		076910CE17ABDE5B00439E30 /* DownloadManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DownloadManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		076910D117ABDE5B00439E30 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		076910D317ABDE5B00439E30 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -95,14 +96,9 @@
 		0769110E17ABDEBC00439E30 /* EGOCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGOCache.m; sourceTree = "<group>"; };
 		0769111E17ABE59B00439E30 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		0769112017ABE5A000439E30 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		076A0E8817ABF74500BDDA96 /* LoggerClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoggerClient.h; sourceTree = "<group>"; };
-		076A0E8917ABF74500BDDA96 /* LoggerClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoggerClient.m; sourceTree = "<group>"; };
-		076A0E8A17ABF74500BDDA96 /* LoggerCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoggerCommon.h; sourceTree = "<group>"; };
 		076A0E8C17ABF77500BDDA96 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		076A0E8E17AC014F00BDDA96 /* ImageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageCell.h; sourceTree = "<group>"; };
 		076A0E8F17AC014F00BDDA96 /* ImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageCell.m; sourceTree = "<group>"; };
-		078CCEB517B1B00900E6F573 /* IACacheManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IACacheManager.h; sourceTree = "<group>"; };
-		078CCEB617B1B00900E6F573 /* IACacheManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IACacheManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,49 +118,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0707C29917ADD4E400840825 /* Parallel */ = {
+		0712337E17BACE4C00808C6A /* IADownloadManager */ = {
 			isa = PBXGroup;
 			children = (
-				071AE59417AC301A0028CBDA /* IADownloadHandler.h */,
-				071AE59517AC301A0028CBDA /* IADownloadHandler.m */,
-				071AE59617AC301A0028CBDA /* IADownloadManager.h */,
-				071AE59717AC301A0028CBDA /* IADownloadManager.m */,
-				071AE59817AC301A0028CBDA /* IADownloadOperation.h */,
-				071AE59917AC301A0028CBDA /* IADownloadOperation.m */,
+				0712337F17BACE4C00808C6A /* IACacheManager.h */,
+				0712338017BACE4C00808C6A /* IACacheManager.m */,
+				0712338117BACE4C00808C6A /* IADownloadHandler.h */,
+				0712338217BACE4C00808C6A /* IADownloadHandler.m */,
+				0712338317BACE4C00808C6A /* IADownloadManager.h */,
+				0712338417BACE4C00808C6A /* IADownloadManager.m */,
+				0712338517BACE4C00808C6A /* IADownloadOperation.h */,
+				0712338617BACE4C00808C6A /* IADownloadOperation.m */,
+				0712338717BACE4C00808C6A /* IASequentialDownloadHandler.h */,
+				0712338817BACE4C00808C6A /* IASequentialDownloadHandler.m */,
+				0712338917BACE4C00808C6A /* IASequentialDownloadManager.h */,
+				0712338A17BACE4C00808C6A /* IASequentialDownloadManager.m */,
 			);
-			name = Parallel;
-			sourceTree = "<group>";
-		};
-		0707C29A17ADD4F300840825 /* Serials */ = {
-			isa = PBXGroup;
-			children = (
-				071AE5A117AC325E0028CBDA /* IASequentialDownloadManager.h */,
-				071AE5A217AC325E0028CBDA /* IASequentialDownloadManager.m */,
-				0707C29517ADD4B000840825 /* IASequentialDownloadHandler.h */,
-				0707C29617ADD4B000840825 /* IASequentialDownloadHandler.m */,
-			);
-			name = Serials;
-			sourceTree = "<group>";
-		};
-		071AE59317AC301A0028CBDA /* IADownloadManager */ = {
-			isa = PBXGroup;
-			children = (
-				078CCEB417B1AFDF00E6F573 /* Misc */,
-				0707C29A17ADD4F300840825 /* Serials */,
-				0707C29917ADD4E400840825 /* Parallel */,
-			);
-			name = IADownloadManager;
-			path = ../../Common/IADownloadManager;
+			path = IADownloadManager;
 			sourceTree = "<group>";
 		};
 		076910C517ABDE5A00439E30 = {
 			isa = PBXGroup;
 			children = (
-				071AE59317AC301A0028CBDA /* IADownloadManager */,
-				076A0E8C17ABF77500BDDA96 /* SystemConfiguration.framework */,
-				076A0E8717ABF74500BDDA96 /* NSLogger */,
-				0769112017ABE5A000439E30 /* Security.framework */,
-				0769111E17ABE59B00439E30 /* CFNetwork.framework */,
+				0712337E17BACE4C00808C6A /* IADownloadManager */,
 				076910F517ABDEBC00439E30 /* ThirdParty */,
 				076910D717ABDE5B00439E30 /* DownloadManager */,
 				076910D017ABDE5B00439E30 /* Frameworks */,
@@ -183,6 +159,9 @@
 		076910D017ABDE5B00439E30 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				076A0E8C17ABF77500BDDA96 /* SystemConfiguration.framework */,
+				0769112017ABE5A000439E30 /* Security.framework */,
+				0769111E17ABE59B00439E30 /* CFNetwork.framework */,
 				076910D117ABDE5B00439E30 /* UIKit.framework */,
 				076910D317ABDE5B00439E30 /* Foundation.framework */,
 				076910D517ABDE5B00439E30 /* CoreGraphics.framework */,
@@ -263,26 +242,6 @@
 				0769110E17ABDEBC00439E30 /* EGOCache.m */,
 			);
 			path = EGOCache;
-			sourceTree = "<group>";
-		};
-		076A0E8717ABF74500BDDA96 /* NSLogger */ = {
-			isa = PBXGroup;
-			children = (
-				076A0E8817ABF74500BDDA96 /* LoggerClient.h */,
-				076A0E8917ABF74500BDDA96 /* LoggerClient.m */,
-				076A0E8A17ABF74500BDDA96 /* LoggerCommon.h */,
-			);
-			name = NSLogger;
-			path = ../../Common/NSLogger;
-			sourceTree = "<group>";
-		};
-		078CCEB417B1AFDF00E6F573 /* Misc */ = {
-			isa = PBXGroup;
-			children = (
-				078CCEB517B1B00900E6F573 /* IACacheManager.h */,
-				078CCEB617B1B00900E6F573 /* IACacheManager.m */,
-			);
-			name = Misc;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -366,14 +325,13 @@
 				0769111817ABDEBC00439E30 /* AFXMLRequestOperation.m in Sources */,
 				0769111917ABDEBC00439E30 /* UIImageView+AFNetworking.m in Sources */,
 				0769111A17ABDEBC00439E30 /* EGOCache.m in Sources */,
-				076A0E8B17ABF74500BDDA96 /* LoggerClient.m in Sources */,
 				076A0E9017AC014F00BDDA96 /* ImageCell.m in Sources */,
-				078CCEB717B1B00900E6F573 /* IACacheManager.m in Sources */,
-				0707C29717ADD4B000840825 /* IASequentialDownloadHandler.m in Sources */,
-				071AE59A17AC301A0028CBDA /* IADownloadHandler.m in Sources */,
-				071AE59B17AC301A0028CBDA /* IADownloadManager.m in Sources */,
-				071AE59C17AC301A0028CBDA /* IADownloadOperation.m in Sources */,
-				071AE5A317AC325E0028CBDA /* IASequentialDownloadManager.m in Sources */,
+				0712338B17BACE4C00808C6A /* IACacheManager.m in Sources */,
+				0712338C17BACE4C00808C6A /* IADownloadHandler.m in Sources */,
+				0712338D17BACE4C00808C6A /* IADownloadManager.m in Sources */,
+				0712338E17BACE4C00808C6A /* IADownloadOperation.m in Sources */,
+				0712338F17BACE4C00808C6A /* IASequentialDownloadHandler.m in Sources */,
+				0712339017BACE4C00808C6A /* IASequentialDownloadManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

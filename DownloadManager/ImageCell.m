@@ -7,7 +7,6 @@
 //
 
 #import "ImageCell.h"
-#import "LoggerClient.h"
 #import "AppDelegate.h"
 
 @implementation ImageCell
@@ -102,7 +101,6 @@
 {
     UIImageView *imageView = (UIImageView*)[self viewWithTag:123321];
     UIImage *image = [UIImage imageWithData:response];
-    LogImageData(@"Image", 0, image.size.width, image.size.height, UIImagePNGRepresentation(image));
     [imageView setImage:image];
 }
 
@@ -117,7 +115,6 @@
     int tag = 12332100 + index + 1;
     UIImageView *imageView = (UIImageView*)[self viewWithTag:tag];
     UIImage *image = [UIImage imageWithData:response];
-    LogImageData(@"Image", 0, image.size.width, image.size.height, UIImagePNGRepresentation(image));
     [imageView setImage:image];
 }
 

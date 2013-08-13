@@ -8,9 +8,9 @@
 
 #import "ViewController.h"
 #import "IADownloadManager.h"
-#import "LoggerClient.h"
 #import "ImageCell.h"
 #import "IASequentialDownloadManager.h"
+
 @interface ViewController ()
 
 @end

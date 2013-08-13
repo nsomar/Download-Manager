@@ -9,7 +9,6 @@
 #import "IADownloadManager.h"
 #import "IADownloadHandler.h"
 #import "IADownloadOperation.h"
-#import "LoggerClient.h"
 
 @interface IADownloadManager()
 
@@ -138,7 +137,7 @@ void (^globalCompletionBlock)(BOOL success, id response, NSURL *url, IADownloadM
     
     
     [handlers addObject:handler];
-    LogMessage(@"Start", 0, @"# (%d) for url %@ tag %d", handlers.count, url, tag);
+
     if (handlers.count == 3) {
         
     }
