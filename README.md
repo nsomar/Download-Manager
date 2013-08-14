@@ -27,6 +27,19 @@ If you tried to create such thing, then you realised that some images has to be 
 IADownloadManager, will help you download images or any other files in a parallel order.
 IASequentialDownloadManager, will help you download a set of urls in a sequential order.
 
+###Installation
+####Using CocoaPods (Recommended)
+1. Install CocoaPods on your machine [Cocoapods](http://cocoapods.org/)
+2. Create a `Podfile`
+3. Add `pod 'IADownloadManager'` to your Podfile
+4. in the Terminal run 'pod install'
+5. open `App.xcworkspace`
+
+####Manual Installation
+1. Copy all the files from IADownloadManager directory to your project.
+2. Copy the files from ThirdParty directory to your project
+3. Add `CFNetwork.framework` and `Security.framework` to the project, if you are not sure on how to  add frameworks read the following SO [answer](http://stackoverflow.com/questions/6334966/adding-framework-in-xcode-4)
+
 ###Prerequisite 
 To use the download manager you should have:
 
@@ -36,12 +49,6 @@ To use the download manager you should have:
 Third party needed (included within the sources of the project):
 * [AFNetworking](https://github.com/AFNetworking/AFNetworking)
 * [EGOCache](https://github.com/enormego/EGOCache)
-
-###Installation
-
-1. Copy all the files from IADownloadManager directory to your project.
-2. Copy the files from ThirdParty directory to your project
-3. Add `CFNetwork.framework` and `Security.framework` to the project, if you are not sure on how to  add frameworks read the following SO [answer](http://stackoverflow.com/questions/6334966/adding-framework-in-xcode-4)
 
 ###How to use
 
