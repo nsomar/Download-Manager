@@ -1,0 +1,475 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		07F29ED91865A074004861CC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07F29ED81865A074004861CC /* Foundation.framework */; };
+		07F29EDB1865A074004861CC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07F29EDA1865A074004861CC /* CoreGraphics.framework */; };
+		07F29EDD1865A074004861CC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07F29EDC1865A074004861CC /* UIKit.framework */; };
+		07F29EE31865A074004861CC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 07F29EE11865A074004861CC /* InfoPlist.strings */; };
+		07F29EE51865A074004861CC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F29EE41865A074004861CC /* main.m */; };
+		07F29EE91865A074004861CC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F29EE81865A074004861CC /* AppDelegate.m */; };
+		07F29EEC1865A074004861CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07F29EEA1865A074004861CC /* Main.storyboard */; };
+		07F29EEF1865A074004861CC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F29EEE1865A074004861CC /* ViewController.m */; };
+		07F29EF11865A074004861CC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07F29EF01865A074004861CC /* Images.xcassets */; };
+		07F29EF81865A074004861CC /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07F29EF71865A074004861CC /* XCTest.framework */; };
+		07F29EF91865A074004861CC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07F29ED81865A074004861CC /* Foundation.framework */; };
+		07F29EFA1865A074004861CC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07F29EDC1865A074004861CC /* UIKit.framework */; };
+		07F29F021865A075004861CC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 07F29F001865A075004861CC /* InfoPlist.strings */; };
+		07F29F041865A075004861CC /* DrAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F29F031865A075004861CC /* DrAppTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		07F29EFB1865A075004861CC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 07F29ECD1865A074004861CC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 07F29ED41865A074004861CC;
+			remoteInfo = DrApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		07F29ED51865A074004861CC /* DrApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DrApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		07F29ED81865A074004861CC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		07F29EDA1865A074004861CC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		07F29EDC1865A074004861CC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		07F29EE01865A074004861CC /* DrApp-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DrApp-Info.plist"; sourceTree = "<group>"; };
+		07F29EE21865A074004861CC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		07F29EE41865A074004861CC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		07F29EE61865A074004861CC /* DrApp-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DrApp-Prefix.pch"; sourceTree = "<group>"; };
+		07F29EE71865A074004861CC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		07F29EE81865A074004861CC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		07F29EEB1865A074004861CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		07F29EED1865A074004861CC /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		07F29EEE1865A074004861CC /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		07F29EF01865A074004861CC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		07F29EF61865A074004861CC /* DrAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DrAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		07F29EF71865A074004861CC /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		07F29EFF1865A075004861CC /* DrAppTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DrAppTests-Info.plist"; sourceTree = "<group>"; };
+		07F29F011865A075004861CC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		07F29F031865A075004861CC /* DrAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DrAppTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		07F29ED21865A074004861CC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07F29EDB1865A074004861CC /* CoreGraphics.framework in Frameworks */,
+				07F29EDD1865A074004861CC /* UIKit.framework in Frameworks */,
+				07F29ED91865A074004861CC /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07F29EF31865A074004861CC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07F29EF81865A074004861CC /* XCTest.framework in Frameworks */,
+				07F29EFA1865A074004861CC /* UIKit.framework in Frameworks */,
+				07F29EF91865A074004861CC /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		07F29ECC1865A074004861CC = {
+			isa = PBXGroup;
+			children = (
+				07F29EDE1865A074004861CC /* DrApp */,
+				07F29EFD1865A075004861CC /* DrAppTests */,
+				07F29ED71865A074004861CC /* Frameworks */,
+				07F29ED61865A074004861CC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		07F29ED61865A074004861CC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				07F29ED51865A074004861CC /* DrApp.app */,
+				07F29EF61865A074004861CC /* DrAppTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		07F29ED71865A074004861CC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				07F29ED81865A074004861CC /* Foundation.framework */,
+				07F29EDA1865A074004861CC /* CoreGraphics.framework */,
+				07F29EDC1865A074004861CC /* UIKit.framework */,
+				07F29EF71865A074004861CC /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		07F29EDE1865A074004861CC /* DrApp */ = {
+			isa = PBXGroup;
+			children = (
+				07F29EE71865A074004861CC /* AppDelegate.h */,
+				07F29EE81865A074004861CC /* AppDelegate.m */,
+				07F29EEA1865A074004861CC /* Main.storyboard */,
+				07F29EED1865A074004861CC /* ViewController.h */,
+				07F29EEE1865A074004861CC /* ViewController.m */,
+				07F29EF01865A074004861CC /* Images.xcassets */,
+				07F29EDF1865A074004861CC /* Supporting Files */,
+			);
+			path = DrApp;
+			sourceTree = "<group>";
+		};
+		07F29EDF1865A074004861CC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				07F29EE01865A074004861CC /* DrApp-Info.plist */,
+				07F29EE11865A074004861CC /* InfoPlist.strings */,
+				07F29EE41865A074004861CC /* main.m */,
+				07F29EE61865A074004861CC /* DrApp-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		07F29EFD1865A075004861CC /* DrAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				07F29F031865A075004861CC /* DrAppTests.m */,
+				07F29EFE1865A075004861CC /* Supporting Files */,
+			);
+			path = DrAppTests;
+			sourceTree = "<group>";
+		};
+		07F29EFE1865A075004861CC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				07F29EFF1865A075004861CC /* DrAppTests-Info.plist */,
+				07F29F001865A075004861CC /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		07F29ED41865A074004861CC /* DrApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 07F29F071865A075004861CC /* Build configuration list for PBXNativeTarget "DrApp" */;
+			buildPhases = (
+				07F29ED11865A074004861CC /* Sources */,
+				07F29ED21865A074004861CC /* Frameworks */,
+				07F29ED31865A074004861CC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DrApp;
+			productName = DrApp;
+			productReference = 07F29ED51865A074004861CC /* DrApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		07F29EF51865A074004861CC /* DrAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 07F29F0A1865A075004861CC /* Build configuration list for PBXNativeTarget "DrAppTests" */;
+			buildPhases = (
+				07F29EF21865A074004861CC /* Sources */,
+				07F29EF31865A074004861CC /* Frameworks */,
+				07F29EF41865A074004861CC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				07F29EFC1865A075004861CC /* PBXTargetDependency */,
+			);
+			name = DrAppTests;
+			productName = DrAppTests;
+			productReference = 07F29EF61865A074004861CC /* DrAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		07F29ECD1865A074004861CC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = InfusionApps;
+				TargetAttributes = {
+					07F29EF51865A074004861CC = {
+						TestTargetID = 07F29ED41865A074004861CC;
+					};
+				};
+			};
+			buildConfigurationList = 07F29ED01865A074004861CC /* Build configuration list for PBXProject "DrApp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 07F29ECC1865A074004861CC;
+			productRefGroup = 07F29ED61865A074004861CC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				07F29ED41865A074004861CC /* DrApp */,
+				07F29EF51865A074004861CC /* DrAppTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		07F29ED31865A074004861CC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07F29EF11865A074004861CC /* Images.xcassets in Resources */,
+				07F29EE31865A074004861CC /* InfoPlist.strings in Resources */,
+				07F29EEC1865A074004861CC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07F29EF41865A074004861CC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07F29F021865A075004861CC /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		07F29ED11865A074004861CC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07F29EEF1865A074004861CC /* ViewController.m in Sources */,
+				07F29EE91865A074004861CC /* AppDelegate.m in Sources */,
+				07F29EE51865A074004861CC /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07F29EF21865A074004861CC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07F29F041865A075004861CC /* DrAppTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		07F29EFC1865A075004861CC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 07F29ED41865A074004861CC /* DrApp */;
+			targetProxy = 07F29EFB1865A075004861CC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		07F29EE11865A074004861CC /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				07F29EE21865A074004861CC /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		07F29EEA1865A074004861CC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				07F29EEB1865A074004861CC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		07F29F001865A075004861CC /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				07F29F011865A075004861CC /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		07F29F051865A075004861CC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		07F29F061865A075004861CC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		07F29F081865A075004861CC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DrApp/DrApp-Prefix.pch";
+				INFOPLIST_FILE = "DrApp/DrApp-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		07F29F091865A075004861CC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DrApp/DrApp-Prefix.pch";
+				INFOPLIST_FILE = "DrApp/DrApp-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		07F29F0B1865A075004861CC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/DrApp.app/DrApp";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DrApp/DrApp-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "DrAppTests/DrAppTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		07F29F0C1865A075004861CC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/DrApp.app/DrApp";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DrApp/DrApp-Prefix.pch";
+				INFOPLIST_FILE = "DrAppTests/DrAppTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		07F29ED01865A074004861CC /* Build configuration list for PBXProject "DrApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				07F29F051865A075004861CC /* Debug */,
+				07F29F061865A075004861CC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		07F29F071865A075004861CC /* Build configuration list for PBXNativeTarget "DrApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				07F29F081865A075004861CC /* Debug */,
+				07F29F091865A075004861CC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		07F29F0A1865A075004861CC /* Build configuration list for PBXNativeTarget "DrAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				07F29F0B1865A075004861CC /* Debug */,
+				07F29F0C1865A075004861CC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 07F29ECD1865A074004861CC /* Project object */;
+}
