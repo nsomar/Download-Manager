@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+@class IADownloadOperation;
 
 typedef void (^IAProgressBlock)(float progress, NSURL *url);
 typedef void (^IACompletionBlock)(BOOL success, id response);
@@ -21,6 +22,11 @@ typedef void (^IACompletionBlock)(BOOL success, id response);
 //Start the download request for a URL, note that the same URL will never be downloaded twice
 + (void) downloadItemWithURL:(NSURL*)url
                     useCache:(BOOL)useCache;
+
+//Start the download request for a URL and saving to a file, note that the same URL will never be downloaded twice
++ (void) downloadItemWithURL:(NSURL*)url
+                    useCache:(BOOL)useCache
+                  saveToPath:(NSString *)path;
 
 //Delegate based events
 // 1 url download operation can have multiple listeners
@@ -42,5 +48,6 @@ typedef void (^IACompletionBlock)(BOOL success, id response);
 
 + (BOOL) isDownloadingItemWithURL:(NSURL*)url;
 + (void) stopDownloadingItemWithURL:(NSURL*)url;
++ (int)listenerCountForUrl:(NSURL *)url;
 
 @end

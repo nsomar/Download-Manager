@@ -17,6 +17,7 @@
 
 + (IADownloadOperation*) downloadingOperationWithURL:(NSURL*)url
                                             useCache:(BOOL)useCache
+                                            filePath:(NSString *)filePath
                                        progressBlock:(IAProgressBlock)progressBlock
                                      completionBlock:(IACompletionBlock)completionBlock;
 

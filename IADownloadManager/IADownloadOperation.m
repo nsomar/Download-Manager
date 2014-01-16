@@ -15,15 +15,19 @@
     BOOL executing;
     BOOL cancelled;
     BOOL finished;
+    NSString *_tempFilePath;
+    NSString *_finalFilePath;
 }
 
 + (IADownloadOperation*) downloadingOperationWithURL:(NSURL*)url
                                             useCache:(BOOL)useCache
+                                            filePath:(NSString *)filePath
                                        progressBlock:(IAProgressBlock)progressBlock
                                      completionBlock:(IACompletionBlock)completionBlock
 {
     IADownloadOperation *op = [IADownloadOperation new];
     op.url = url;
+    op->_finalFilePath = filePath;
  
     if(useCache && [self hasCacheForURL:url])
     {
@@ -39,6 +43,17 @@
                                                   parameters:nil];
     
     AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
+
+    if (filePath)
+    {
+        NSString *fname = [NSString stringWithFormat:@"tempDownload%d", arc4random_uniform(INT_MAX)];
+        op->_tempFilePath = [NSTemporaryDirectory() stringByAppendingPathComponent:fname];
+        if ([[NSFileManager defaultManager] fileExistsAtPath:op->_tempFilePath])
+        {
+            [[NSFileManager defaultManager] removeItemAtPath:op->_tempFilePath error:nil];
+        }
+        operation.outputStream = [[NSOutputStream alloc] initToFileAtPath:op->_tempFilePath append:NO];
+    }
     op.operation = operation;
     
     __weak IADownloadOperation *weakOp = op;
@@ -48,6 +63,12 @@
          
          [IADownloadOperation setCacheWithData:responseObject url:url];
          __strong IADownloadOperation *StrongOp = weakOp;
+         if(StrongOp != nil && StrongOp->_tempFilePath && StrongOp->_finalFilePath)
+         {
+             NSError *error = nil;
+             [[NSFileManager defaultManager] removeItemAtPath:StrongOp->_finalFilePath error:&error];
+             [[NSFileManager defaultManager] moveItemAtPath:StrongOp->_tempFilePath toPath:StrongOp->_finalFilePath error:&error];
+         }
          [StrongOp finish];
          completionBlock(YES, responseObject);
          

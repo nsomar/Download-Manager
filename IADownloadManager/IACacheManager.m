@@ -56,8 +56,16 @@
 
 + (void) setObject:(id)object forKey:(NSString *)key
 {
-    [self.instance.memCache setObject:object forKey:key];
-    [[EGOCache globalCache] setObject:object forKey:key];
+    if (object)
+    {
+        [self.instance.memCache setObject:object forKey:key];
+        [[EGOCache globalCache] setObject:object forKey:key];
+    }
+    else
+    {
+        [self.instance.memCache removeObjectForKey:key];
+        [[EGOCache globalCache] removeCacheForKey:key];
+    }
 }
 
 + (id) objectForKey:(NSString *)key
