@@ -9,6 +9,7 @@
 #import "IADownloadOperation.h"
 #import "AFNetworking.h"
 #import "IACacheManager.h"
+#import <CommonCrypto/CommonDigest.h>
 
 @implementation IADownloadOperation
 {
@@ -36,11 +37,7 @@
         return nil;
     }
     
-    AFHTTPClient *client = [AFHTTPClient clientWithBaseURL:url];
-    
-    NSMutableURLRequest *request = [client requestWithMethod:@"GET"
-                                                        path:url.absoluteString
-                                                  parameters:nil];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
     
     AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
 
@@ -80,8 +77,7 @@
          [StrongOp finish];
      }];
     
-    [op.operation
-     setDownloadProgressBlock:^(NSUInteger bytesRead, long long totalBytesRead, long long totalBytesExpectedToRead) {
+     [op.operation setDownloadProgressBlock:^(NSUInteger bytesRead, NSInteger totalBytesRead, NSInteger totalBytesExpectedToRead) {
          
          float progress;
          
