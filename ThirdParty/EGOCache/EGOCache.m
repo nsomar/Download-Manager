@@ -126,15 +126,20 @@ static inline NSString* cachePathForKey(NSString* directory, NSString* key) {
 }
 
 - (void)clearCache {
+    __weak typeof(self) weakSelf = self;
 	dispatch_sync(_cacheInfoQueue, ^{
-		for(NSString* key in _cacheInfo) {
-			[[NSFileManager defaultManager] removeItemAtPath:cachePathForKey(_directory, key) error:NULL];
+        __strong typeof(self) strongSelf = weakSelf;
+        if(strongSelf == nil) return;
+		for(NSString* key in strongSelf->_cacheInfo) {
+			[[NSFileManager defaultManager] removeItemAtPath:cachePathForKey(strongSelf->_directory, key) error:NULL];
 		}
 		
-		[_cacheInfo removeAllObjects];
+		[strongSelf->_cacheInfo removeAllObjects];
 		
-		dispatch_sync(_frozenCacheInfoQueue, ^{
-			self.frozenCacheInfo = [_cacheInfo copy];
+		dispatch_sync(strongSelf->_frozenCacheInfoQueue, ^{
+            __strong typeof(self) strongSelf = weakSelf;
+            if(strongSelf == nil) return;
+			strongSelf.frozenCacheInfo = [strongSelf->_cacheInfo copy];
 		});
 
 		[self setNeedsSave];
@@ -143,9 +148,11 @@ static inline NSString* cachePathForKey(NSString* directory, NSString* key) {
 
 - (void)removeCacheForKey:(NSString*)key {
 	CHECK_FOR_EGOCACHE_PLIST();
-
+    __weak typeof(self) weakSelf = self;
 	dispatch_async(_diskQueue, ^{
-		[[NSFileManager defaultManager] removeItemAtPath:cachePathForKey(_directory, key) error:NULL];
+        __strong typeof(self) strongSelf = weakSelf;
+        if(strongSelf == nil) return;
+		[[NSFileManager defaultManager] removeItemAtPath:cachePathForKey(strongSelf->_directory, key) error:NULL];
 	});
 
 	[self setCacheTimeoutInterval:0 forKey:key];
@@ -196,19 +203,24 @@ static inline NSString* cachePathForKey(NSString* directory, NSString* key) {
 	});
 	
 	
+    __weak typeof(self) weakSelf = self;
 	// Save the final copy (this may be blocked by other operations)
 	dispatch_async(_cacheInfoQueue, ^{
+        __strong typeof(self) strongSelf = weakSelf;
+        if(strongSelf == nil) return;
 		if(date) {
-			_cacheInfo[key] = date;
+			strongSelf->_cacheInfo[key] = date;
 		} else {
-			[_cacheInfo removeObjectForKey:key];
+			[strongSelf->_cacheInfo removeObjectForKey:key];
 		}
 		
-		dispatch_sync(_frozenCacheInfoQueue, ^{
-			self.frozenCacheInfo = [_cacheInfo copy];
+		dispatch_sync(strongSelf->_frozenCacheInfoQueue, ^{
+            __strong typeof(self) strongSelf = weakSelf;
+            if(strongSelf == nil) return;
+			strongSelf.frozenCacheInfo = [strongSelf->_cacheInfo copy];
 		});
 
-		[self setNeedsSave];
+		[strongSelf setNeedsSave];
 	});
 }
 
@@ -220,8 +232,11 @@ static inline NSString* cachePathForKey(NSString* directory, NSString* key) {
 }
 
 - (void)copyFilePath:(NSString*)filePath asKey:(NSString*)key withTimeoutInterval:(NSTimeInterval)timeoutInterval {
+    __weak typeof(self) weakSelf = self;
 	dispatch_async(_diskQueue, ^{
-		[[NSFileManager defaultManager] copyItemAtPath:filePath toPath:cachePathForKey(_directory, key) error:NULL];
+        __strong typeof(self) strongSelf = weakSelf;
+        if(strongSelf == nil) return;
+		[[NSFileManager defaultManager] copyItemAtPath:filePath toPath:cachePathForKey(strongSelf->_directory, key) error:NULL];
 	});
 	
 	[self setCacheTimeoutInterval:timeoutInterval forKey:key];
@@ -247,16 +262,21 @@ static inline NSString* cachePathForKey(NSString* directory, NSString* key) {
 }
 
 - (void)setNeedsSave {
+    __weak typeof(self) weakSelf = self;
 	dispatch_async(_cacheInfoQueue, ^{
-		if(_needsSave) return;
-		_needsSave = YES;
+        __strong typeof(self) strongSelf = weakSelf;
+        if(strongSelf == nil) return;
+		if(strongSelf->_needsSave) return;
+		strongSelf->_needsSave = YES;
 		
 		double delayInSeconds = 0.5;
 		dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
-		dispatch_after(popTime, _cacheInfoQueue, ^(void){
-			if(!_needsSave) return;
-			[_cacheInfo writeToFile:cachePathForKey(_directory, @"EGOCache.plist") atomically:YES];
-			_needsSave = NO;
+		dispatch_after(popTime, strongSelf->_cacheInfoQueue, ^(void){
+            __strong typeof(self) strongSelf = weakSelf;
+            if(strongSelf == nil) return;
+			if(!strongSelf->_needsSave) return;
+			[strongSelf->_cacheInfo writeToFile:cachePathForKey(strongSelf->_directory, @"EGOCache.plist") atomically:YES];
+			strongSelf->_needsSave = NO;
 		});
 	});
 }

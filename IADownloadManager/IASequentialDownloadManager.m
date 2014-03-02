@@ -183,6 +183,7 @@ void (^globalSequentialCompletionBlock)
     IADownloadOperation *op = [IADownloadOperation
                                downloadingOperationWithURL:url
                                useCache:useCache
+                               filePath:nil
                                progressBlock:^(float progress, NSURL *url) {
                                    
                                    globalSequentialProgressBlock(progress, url, urls,

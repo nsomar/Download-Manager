@@ -90,13 +90,6 @@ void (^globalCompletionBlock)(BOOL success, id response, NSURL *url, IADownloadM
 #pragma mark Entry Point
 #pragma mark -
 
-- (void) downloadItemWithURL:(NSURL*)url
-                    useCache:(BOOL)useCache
-{
-    //Create a new download operation if it does not already Exist
-    [self startDownloadOperation:url useCache:useCache];
-}
-
 - (void) attachNewHandlerWithListener:(id<IADownloadManagerDelegate>)listener
                                 toURL:(NSURL*)url
 {
@@ -150,6 +143,7 @@ void (^globalCompletionBlock)(BOOL success, id response, NSURL *url, IADownloadM
 
 - (void)startDownloadOperation:(NSURL*)url
                       useCache:(BOOL)useCache
+                    saveToPath:(NSString *)path
 {
     if([self isDownloadingItemWithURL:url])
         return;
@@ -157,6 +151,7 @@ void (^globalCompletionBlock)(BOOL success, id response, NSURL *url, IADownloadM
     IADownloadOperation *downloadingOperation = [IADownloadOperation
                                                  downloadingOperationWithURL:url
                                                  useCache:useCache
+                                                 filePath:path
                                                  progressBlock:^(float progress, id x) {
                                                      
                                                      globalProgressBlock(progress, url, self);
@@ -259,11 +254,16 @@ void (^globalCompletionBlock)(BOOL success, id response, NSURL *url, IADownloadM
 #pragma mark Class Interface Memebers
 #pragma mark -
 
++ (void) downloadItemWithURL:(NSURL*)url useCache:(BOOL)useCache
+{
+    [IADownloadManager downloadItemWithURL:url useCache:useCache saveToPath:nil];
+}
+
 + (void) downloadItemWithURL:(NSURL*)url
                     useCache:(BOOL)useCache
+                  saveToPath:(NSString *)path
 {
-    [[self instance] downloadItemWithURL:url
-                                useCache:useCache];
+    [[self instance] startDownloadOperation:url useCache:useCache saveToPath:path];
 }
 
 + (void) attachListener:(id<IADownloadManagerDelegate>)listener toURL:(NSURL*)url
@@ -312,6 +312,12 @@ void (^globalCompletionBlock)(BOOL success, id response, NSURL *url, IADownloadM
 + (void) stopDownloadingItemWithURL:(NSURL*)url
 {
     [[[self instance].downloadOperations objectForKey:url] stop];
+}
+
++ (int)listenerCountForUrl:(NSURL *)url
+{
+    NSMutableArray *handlers = [[self instance].downloadHandlers objectForKey:url];
+    return handlers.count;
 }
 
 @end
