@@ -1,5 +1,7 @@
 ##iOS download manager
 
+[![Build Status](https://travis-ci.org/Infusion-apps/Download-Manager.png?branch=master)](https://travis-ci.org/Infusion-apps/Download-Manager)
+
 ###A Minimalist download manager for iOS
 
 Download a set of files in parallel or sequential order.
