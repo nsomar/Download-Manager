@@ -131,9 +131,6 @@ void (^globalCompletionBlock)(BOOL success, id response, NSURL *url, IADownloadM
     
     [handlers addObject:handler];
 
-    if (handlers.count == 3) {
-        
-    }
     [self.downloadHandlers setObject:handlers forKey:url];
 }
 

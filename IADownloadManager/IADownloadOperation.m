@@ -77,7 +77,7 @@
          [StrongOp finish];
      }];
     
-     [op.operation setDownloadProgressBlock:^(NSUInteger bytesRead, long long totalBytesRead, long long totalBytesExpectedToRead) {
+     [op.operation setDownloadProgressBlock:^(NSUInteger bytesRead, NSInteger totalBytesRead, NSInteger totalBytesExpectedToRead) {
          
          float progress;
          

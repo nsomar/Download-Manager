@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>0F7CC913-33D7-4FEE-8A68-4D4497E70184</string>
+	<key>IDESourceControlProjectName</key>
+	<string>DownloadManager</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>F9A5DED5-5A13-4ACD-A228-563EB8E65F4F</key>
+		<string>ssh://github.com/Infusion-apps/Download-Manager.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>DownloadManager.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>F9A5DED5-5A13-4ACD-A228-563EB8E65F4F</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://github.com/Infusion-apps/Download-Manager.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>F9A5DED5-5A13-4ACD-A228-563EB8E65F4F</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>F9A5DED5-5A13-4ACD-A228-563EB8E65F4F</string>
+			<key>IDESourceControlWCCName</key>
+			<string>DownloadManagerGit</string>
+		</dict>
+	</array>
+</dict>
+</plist>
