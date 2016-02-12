@@ -31,7 +31,7 @@ IASequentialDownloadManager, will help you download a set of urls in a sequentia
 
 ###Installation
 ####Using CocoaPods (Recommended)
-1. Install CocoaPods on your machine [Cocoapods](http://cocoapods.org/)
+1. Install CocoaPods on your machine [CocoaPods](http://cocoapods.org/)
 2. Create a `Podfile`
 3. Add `pod 'IADownloadManager'` to your Podfile
 4. in the Terminal run 'pod install'
