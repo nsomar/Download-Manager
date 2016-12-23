@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "6F8DD6383E87740B8A943C24DB413CEC49E4B7DF",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "F9A5DED5-5A13-4ACD-A228-563EB8E65F4F" : 0,
+    "6F8DD6383E87740B8A943C24DB413CEC49E4B7DF" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "0F7CC913-33D7-4FEE-8A68-4D4497E70184",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "F9A5DED5-5A13-4ACD-A228-563EB8E65F4F" : "DownloadManagerGit",
+    "6F8DD6383E87740B8A943C24DB413CEC49E4B7DF" : "Download-Manager\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "DownloadManager",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "DownloadManager.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/redbearder\/Download-Manager.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "6F8DD6383E87740B8A943C24DB413CEC49E4B7DF"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "ssh:\/\/github.com\/Infusion-apps\/Download-Manager.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "F9A5DED5-5A13-4ACD-A228-563EB8E65F4F"
+    }
+  ]
+}

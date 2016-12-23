@@ -7,7 +7,7 @@
 //
 
 #import "IACacheManager.h"
-#import "EGOCache.h"
+#import <EGOCache/EGOCache.h>
 
 @interface IACacheManager()
 @property (nonatomic, strong) NSMutableDictionary *memCache;
