@@ -9,11 +9,11 @@
 #import <Foundation/Foundation.h>
 #import "IADownloadManager.h"
 
-@class AFHTTPRequestOperation;
 
 @interface IADownloadOperation : NSOperation
 @property (nonatomic, strong) NSURL *url;
-@property (nonatomic, strong) AFHTTPRequestOperation *operation;
+@property (nonatomic, strong) NSURLSessionDownloadTask *task;
+
 
 + (IADownloadOperation*) downloadingOperationWithURL:(NSURL*)url
                                             useCache:(BOOL)useCache
