@@ -7,7 +7,7 @@
 //
 
 #import "IADownloadOperation.h"
-#import "AFNetworking.h"
+#import <AFNetworking/AFNetworking.h>
 #import "IACacheManager.h"
 #import <CommonCrypto/CommonDigest.h>
 
@@ -65,7 +65,7 @@
              }
              task.outputStream = [[NSOutputStream alloc] initToFileAtPath:t->_tempFilePath append:NO];
              */
-            return [NSURL URLWithString:filePath];
+            return [NSURL fileURLWithPath:filePath];
         }
         else
         {
@@ -75,7 +75,7 @@
             {
                 [[NSFileManager defaultManager] removeItemAtPath:t->_tempFilePath error:nil];
             }
-            return [NSURL URLWithString:t->_tempFilePath];
+            return [NSURL fileURLWithPath:t->_tempFilePath];
         }
     } completionHandler:^(NSURLResponse * _Nonnull response, NSURL * _Nullable filePath, NSError * _Nullable error) {
         //
