@@ -48,6 +48,6 @@ typedef void (^IACompletionBlock)(BOOL success, id response);
 
 + (BOOL) isDownloadingItemWithURL:(NSURL*)url;
 + (void) stopDownloadingItemWithURL:(NSURL*)url;
-+ (int) listenerCountForUrl:(NSURL *)url;
++ (NSUInteger) listenerCountForUrl:(NSURL *)url;
 
 @end

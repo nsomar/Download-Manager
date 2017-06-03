@@ -7,7 +7,7 @@
 //
 
 #import "IADownloadOperation.h"
-#import "AFNetworking.h"
+#import <AFNetworking/AFNetworking.h>
 #import "IACacheManager.h"
 #import <CommonCrypto/CommonDigest.h>
 
@@ -26,74 +26,87 @@
                                        progressBlock:(IAProgressBlock)progressBlock
                                      completionBlock:(IACompletionBlock)completionBlock
 {
-    IADownloadOperation *op = [IADownloadOperation new];
-    op.url = url;
-    op->_finalFilePath = filePath;
- 
+    IADownloadOperation *t = [IADownloadOperation new];
+    t.url = url;
+    t->_finalFilePath = filePath;
+    
     if(useCache && [self hasCacheForURL:url])
     {
-        [op fetchItemFromCacheForURL:url progressBlock:progressBlock
-                       completionBlock:completionBlock];
+        [t fetchItemFromCacheForURL:url progressBlock:progressBlock
+                    completionBlock:completionBlock];
         return nil;
     }
+    __weak IADownloadOperation *weakT = t;
     
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     
-    AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
-
-    if (filePath)
-    {
-        NSString *fname = [NSString stringWithFormat:@"tempDownload%d", arc4random_uniform(INT_MAX)];
-        op->_tempFilePath = [NSTemporaryDirectory() stringByAppendingPathComponent:fname];
-        if ([[NSFileManager defaultManager] fileExistsAtPath:op->_tempFilePath])
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    
+    manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+    NSURLSessionDownloadTask *task = [manager downloadTaskWithRequest:request progress:^(NSProgress * _Nonnull downloadProgress) {
+        //
+        float progress;
+        
+        progress = downloadProgress.fractionCompleted;
+        
+        progressBlock(progress, url);
+        
+    } destination:^NSURL * _Nonnull(NSURL * _Nonnull targetPath, NSURLResponse * _Nonnull response) {
+        //
+        
+        if (filePath)
         {
-            [[NSFileManager defaultManager] removeItemAtPath:op->_tempFilePath error:nil];
+            /*
+             NSString *fname = [NSString stringWithFormat:@"tempDownload%d", arc4random_uniform(INT_MAX)];
+             t->_tempFilePath = [NSTemporaryDirectory() stringByAppendingPathComponent:fname];
+             if ([[NSFileManager defaultManager] fileExistsAtPath:t->_tempFilePath])
+             {
+             [[NSFileManager defaultManager] removeItemAtPath:t->_tempFilePath error:nil];
+             }
+             task.outputStream = [[NSOutputStream alloc] initToFileAtPath:t->_tempFilePath append:NO];
+             */
+            return [NSURL fileURLWithPath:filePath];
         }
-        operation.outputStream = [[NSOutputStream alloc] initToFileAtPath:op->_tempFilePath append:NO];
-    }
-    op.operation = operation;
+        else
+        {
+            NSString *fname = [NSString stringWithFormat:@"tempDownload%d", arc4random_uniform(INT_MAX)];
+            t->_tempFilePath = [NSTemporaryDirectory() stringByAppendingPathComponent:fname];
+            if ([[NSFileManager defaultManager] fileExistsAtPath:t->_tempFilePath])
+            {
+                [[NSFileManager defaultManager] removeItemAtPath:t->_tempFilePath error:nil];
+            }
+            return [NSURL fileURLWithPath:t->_tempFilePath];
+        }
+    } completionHandler:^(NSURLResponse * _Nonnull response, NSURL * _Nullable filePath, NSError * _Nullable error) {
+        //
+        if(error)
+        {
+            __strong IADownloadOperation *StrongT = weakT;
+            completionBlock(NO, nil);
+            [StrongT finish];
+        }
+        else
+        {
+            [IADownloadOperation setCacheWithData:[NSData dataWithContentsOfFile:filePath.path] url:url];
+            __strong IADownloadOperation *StrongT = weakT;
+            if(StrongT != nil && StrongT->_tempFilePath && StrongT->_finalFilePath)
+            {
+                NSError *error = nil;
+                [[NSFileManager defaultManager] removeItemAtPath:StrongT->_finalFilePath error:&error];
+                [[NSFileManager defaultManager] moveItemAtPath:StrongT->_tempFilePath toPath:StrongT->_finalFilePath error:&error];
+            }
+            [StrongT finish];
+            completionBlock(YES, [NSData dataWithContentsOfFile:filePath.path]);
+        }
+    }];
     
-    __weak IADownloadOperation *weakOp = op;
-    [op.operation
-     setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
-         
-         
-         [IADownloadOperation setCacheWithData:responseObject url:url];
-         __strong IADownloadOperation *StrongOp = weakOp;
-         if(StrongOp != nil && StrongOp->_tempFilePath && StrongOp->_finalFilePath)
-         {
-             NSError *error = nil;
-             [[NSFileManager defaultManager] removeItemAtPath:StrongOp->_finalFilePath error:&error];
-             [[NSFileManager defaultManager] moveItemAtPath:StrongOp->_tempFilePath toPath:StrongOp->_finalFilePath error:&error];
-         }
-         [StrongOp finish];
-         completionBlock(YES, responseObject);
-         
-     }
-     failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-         
-         __strong IADownloadOperation *StrongOp = weakOp;
-         completionBlock(NO, nil);
-         [StrongOp finish];
-     }];
     
-     [op.operation setDownloadProgressBlock:^(NSUInteger bytesRead, NSInteger totalBytesRead, NSInteger totalBytesExpectedToRead) {
-         
-         float progress;
-         
-         if (totalBytesExpectedToRead == -1)
-         {
-             progress = -32;
-         }
-         else
-         {
-             progress = (double)totalBytesRead / (double)totalBytesExpectedToRead;
-         }
-         
-         progressBlock(progress, url);
-     }];
     
-    return op;
+    t.task = task;
+    
+    
+    
+    return t;
 }
 
 - (void)start
@@ -104,7 +117,7 @@
     executing = YES;
     [self didChangeValueForKey:@"isExecuting"];
     
-    [self.operation start];
+    [self.task resume];
 }
 
 - (void)finish
@@ -133,7 +146,7 @@
         
         NSString *encodeKey = [IADownloadOperation cacheKeyForUrl:url];
         NSData *data = [IACacheManager objectForKey:encodeKey];
-
+        
         dispatch_async(dispatch_get_main_queue(), ^{
             
             progressBlock(1, url);
@@ -166,13 +179,13 @@
 
 - (void)startOperation
 {
-    [self.operation start];
+    [self.task resume];
     executing = YES;
 }
 
 - (void)stop
 {
-    [self.operation cancel];
+    [self.task cancel];
     cancelled = YES;
 }
 

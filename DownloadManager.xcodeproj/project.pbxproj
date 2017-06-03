@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		048F77009894932E5B3429BC /* Pods_DownloadManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F23F113F09CA05A4E2B9F1DC /* Pods_DownloadManager.framework */; };
 		0712338B17BACE4C00808C6A /* IACacheManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0712338017BACE4C00808C6A /* IACacheManager.m */; };
 		0712338C17BACE4C00808C6A /* IADownloadHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 0712338217BACE4C00808C6A /* IADownloadHandler.m */; };
 		0712338D17BACE4C00808C6A /* IADownloadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0712338417BACE4C00808C6A /* IADownloadManager.m */; };
@@ -28,14 +29,12 @@
 		0769112117ABE5A000439E30 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0769112017ABE5A000439E30 /* Security.framework */; };
 		076A0E8D17ABF77500BDDA96 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 076A0E8C17ABF77500BDDA96 /* SystemConfiguration.framework */; };
 		076A0E9017AC014F00BDDA96 /* ImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 076A0E8F17AC014F00BDDA96 /* ImageCell.m */; };
-		07750FF818C616CC00A7754B /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 07750FF718C616CB00A7754B /* Podfile */; };
 		07750FFF18C617A800A7754B /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07750FFE18C617A800A7754B /* XCTest.framework */; };
 		0775100018C617A800A7754B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 076910D317ABDE5B00439E30 /* Foundation.framework */; };
 		0775100118C617A800A7754B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 076910D117ABDE5B00439E30 /* UIKit.framework */; };
 		0775100718C617A800A7754B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0775100518C617A800A7754B /* InfoPlist.strings */; };
 		0775100918C617A800A7754B /* DownloadManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0775100818C617A800A7754B /* DownloadManagerTests.m */; };
 		07ED116418C666360015ACCA /* IADownloadManager+TestHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 07ED116318C666360015ACCA /* IADownloadManager+TestHelper.m */; };
-		5E477E43539D42658B9AFF41 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E7F3650686854467B79268BA /* libPods.a */; };
 		A5869823F09B41B7B6216966 /* libPods-DownloadManagerTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 756BD6ACC37D478B9A09C9CB /* libPods-DownloadManagerTests.a */; };
 /* End PBXBuildFile section */
 
@@ -83,7 +82,6 @@
 		076A0E8C17ABF77500BDDA96 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		076A0E8E17AC014F00BDDA96 /* ImageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageCell.h; sourceTree = "<group>"; };
 		076A0E8F17AC014F00BDDA96 /* ImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageCell.m; sourceTree = "<group>"; };
-		07750FF718C616CB00A7754B /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		07750FFD18C617A800A7754B /* DownloadManagerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DownloadManagerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		07750FFE18C617A800A7754B /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		0775100418C617A800A7754B /* DownloadManagerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DownloadManagerTests-Info.plist"; sourceTree = "<group>"; };
@@ -93,9 +91,14 @@
 		07ED116218C666360015ACCA /* IADownloadManager+TestHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "IADownloadManager+TestHelper.h"; sourceTree = "<group>"; };
 		07ED116318C666360015ACCA /* IADownloadManager+TestHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "IADownloadManager+TestHelper.m"; sourceTree = "<group>"; };
 		756BD6ACC37D478B9A09C9CB /* libPods-DownloadManagerTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DownloadManagerTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		B6957401EDE34E4685F72289 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
-		C434396CBBA644199F1A57D7 /* Pods-DownloadManagerTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DownloadManagerTests.xcconfig"; path = "Pods/Pods-DownloadManagerTests.xcconfig"; sourceTree = "<group>"; };
+		7BADDE894D10B7AE1AA6E418 /* Pods-DownloadManagerTests.testing.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DownloadManagerTests.testing.xcconfig"; path = "Pods/Target Support Files/Pods-DownloadManagerTests/Pods-DownloadManagerTests.testing.xcconfig"; sourceTree = "<group>"; };
+		D852B6DD320B80174ECA04AB /* Pods-DownloadManager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DownloadManager.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DownloadManager/Pods-DownloadManager.debug.xcconfig"; sourceTree = "<group>"; };
+		D90412957FC41672AB348505 /* Pods-DownloadManagerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DownloadManagerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DownloadManagerTests/Pods-DownloadManagerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		DEEB008E0F77C542F0C6059A /* Pods-DownloadManager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DownloadManager.release.xcconfig"; path = "Pods/Target Support Files/Pods-DownloadManager/Pods-DownloadManager.release.xcconfig"; sourceTree = "<group>"; };
+		E4A61679760ABB1113E10B94 /* Pods-DownloadManagerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DownloadManagerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DownloadManagerTests/Pods-DownloadManagerTests.release.xcconfig"; sourceTree = "<group>"; };
 		E7F3650686854467B79268BA /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC001694D5B4B3B859719551 /* Pods-DownloadManager.testing.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DownloadManager.testing.xcconfig"; path = "Pods/Target Support Files/Pods-DownloadManager/Pods-DownloadManager.testing.xcconfig"; sourceTree = "<group>"; };
+		F23F113F09CA05A4E2B9F1DC /* Pods_DownloadManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DownloadManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,7 +112,7 @@
 				076910D217ABDE5B00439E30 /* UIKit.framework in Frameworks */,
 				076910D417ABDE5B00439E30 /* Foundation.framework in Frameworks */,
 				076910D617ABDE5B00439E30 /* CoreGraphics.framework in Frameworks */,
-				5E477E43539D42658B9AFF41 /* libPods.a in Frameworks */,
+				048F77009894932E5B3429BC /* Pods_DownloadManager.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -154,9 +157,7 @@
 				0775100218C617A800A7754B /* DownloadManagerTests */,
 				076910D017ABDE5B00439E30 /* Frameworks */,
 				076910CF17ABDE5B00439E30 /* Products */,
-				07750FF718C616CB00A7754B /* Podfile */,
-				B6957401EDE34E4685F72289 /* Pods.xcconfig */,
-				C434396CBBA644199F1A57D7 /* Pods-DownloadManagerTests.xcconfig */,
+				0F09F2D9B85697D523D5C36D /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -181,6 +182,7 @@
 				E7F3650686854467B79268BA /* libPods.a */,
 				07750FFE18C617A800A7754B /* XCTest.framework */,
 				756BD6ACC37D478B9A09C9CB /* libPods-DownloadManagerTests.a */,
+				F23F113F09CA05A4E2B9F1DC /* Pods_DownloadManager.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -235,6 +237,19 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		0F09F2D9B85697D523D5C36D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D90412957FC41672AB348505 /* Pods-DownloadManagerTests.debug.xcconfig */,
+				7BADDE894D10B7AE1AA6E418 /* Pods-DownloadManagerTests.testing.xcconfig */,
+				E4A61679760ABB1113E10B94 /* Pods-DownloadManagerTests.release.xcconfig */,
+				D852B6DD320B80174ECA04AB /* Pods-DownloadManager.debug.xcconfig */,
+				EC001694D5B4B3B859719551 /* Pods-DownloadManager.testing.xcconfig */,
+				DEEB008E0F77C542F0C6059A /* Pods-DownloadManager.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -242,11 +257,15 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 076910F117ABDE5B00439E30 /* Build configuration list for PBXNativeTarget "DownloadManager" */;
 			buildPhases = (
-				81FFFE699815432FB3048E06 /* Check Pods Manifest.lock */,
+				0FA23FFBAC0FBEC1F3D1516B /* 📦 Check Pods Manifest.lock */,
+				B0AD282CD8A423F171E9FD72 /* [CP] Check Pods Manifest.lock */,
 				076910CA17ABDE5A00439E30 /* Sources */,
 				076910CB17ABDE5A00439E30 /* Frameworks */,
 				076910CC17ABDE5A00439E30 /* Resources */,
-				28DA65BF78E445048FAFAED3 /* Copy Pods Resources */,
+				C06B71F16972163C47D11FD5 /* [CP] Embed Pods Frameworks */,
+				6F7949D6C90A58AD4FFA2AEE /* [CP] Copy Pods Resources */,
+				710D2F21F76597FA268F7247 /* 📦 Embed Pods Frameworks */,
+				AFBDE884AF273481EFC88050 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -261,11 +280,16 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0775100D18C617A900A7754B /* Build configuration list for PBXNativeTarget "DownloadManagerTests" */;
 			buildPhases = (
-				71FC01163ED240B0BA368937 /* Check Pods Manifest.lock */,
+				D7458711D41D5BDCF1819E85 /* 📦 Check Pods Manifest.lock */,
+				F9CC66B9E1D8AB0AE86691BC /* [CP] Check Pods Manifest.lock */,
+				71FC01163ED240B0BA368937 /* [CP] Check Pods Manifest.lock */,
 				07750FF918C617A800A7754B /* Sources */,
 				07750FFA18C617A800A7754B /* Frameworks */,
 				07750FFB18C617A800A7754B /* Resources */,
-				338334E42E5B4FCAA12E38F1 /* Copy Pods Resources */,
+				338334E42E5B4FCAA12E38F1 /* [CP] Copy Pods Resources */,
+				1E3B95EEF29F4D67C4A4C6C2 /* [CP] Embed Pods Frameworks */,
+				4D82C7A6AB2BC1D982729F6A /* 📦 Embed Pods Frameworks */,
+				268BEB52C85A832E24DD8AE3 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -283,7 +307,7 @@
 		076910C617ABDE5A00439E30 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0460;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = InfusionApps;
 				TargetAttributes = {
 					07750FFC18C617A800A7754B = {
@@ -316,7 +340,6 @@
 			files = (
 				076910DC17ABDE5B00439E30 /* InfoPlist.strings in Resources */,
 				076910E417ABDE5B00439E30 /* Default.png in Resources */,
-				07750FF818C616CC00A7754B /* Podfile in Resources */,
 				076910E617ABDE5B00439E30 /* Default@2x.png in Resources */,
 				076910E817ABDE5B00439E30 /* Default-568h@2x.png in Resources */,
 				076910EE17ABDE5B00439E30 /* ViewController.xib in Resources */,
@@ -334,44 +357,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		28DA65BF78E445048FAFAED3 /* Copy Pods Resources */ = {
+		0FA23FFBAC0FBEC1F3D1516B /* 📦 Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		338334E42E5B4FCAA12E38F1 /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-DownloadManagerTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		71FC01163ED240B0BA368937 /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
+			name = "📦 Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -379,19 +372,184 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		81FFFE699815432FB3048E06 /* Check Pods Manifest.lock */ = {
+		1E3B95EEF29F4D67C4A4C6C2 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DownloadManagerTests/Pods-DownloadManagerTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		268BEB52C85A832E24DD8AE3 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DownloadManagerTests/Pods-DownloadManagerTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		338334E42E5B4FCAA12E38F1 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DownloadManagerTests/Pods-DownloadManagerTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4D82C7A6AB2BC1D982729F6A /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DownloadManagerTests/Pods-DownloadManagerTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6F7949D6C90A58AD4FFA2AEE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DownloadManager/Pods-DownloadManager-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		710D2F21F76597FA268F7247 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DownloadManager/Pods-DownloadManager-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		71FC01163ED240B0BA368937 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		AFBDE884AF273481EFC88050 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DownloadManager/Pods-DownloadManager-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B0AD282CD8A423F171E9FD72 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C06B71F16972163C47D11FD5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DownloadManager/Pods-DownloadManager-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D7458711D41D5BDCF1819E85 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F9CC66B9E1D8AB0AE86691BC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -468,25 +626,35 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
@@ -499,18 +667,27 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -519,7 +696,7 @@
 		};
 		076910F217ABDE5B00439E30 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B6957401EDE34E4685F72289 /* Pods.xcconfig */;
+			baseConfigurationReference = D852B6DD320B80174ECA04AB /* Pods-DownloadManager.debug.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DownloadManager/DownloadManager-Prefix.pch";
@@ -528,6 +705,7 @@
 					"COCOAPODS=1",
 				);
 				INFOPLIST_FILE = "DownloadManager/DownloadManager-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "InfusionApps.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -535,11 +713,12 @@
 		};
 		076910F317ABDE5B00439E30 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B6957401EDE34E4685F72289 /* Pods.xcconfig */;
+			baseConfigurationReference = DEEB008E0F77C542F0C6059A /* Pods-DownloadManager.release.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DownloadManager/DownloadManager-Prefix.pch";
 				INFOPLIST_FILE = "DownloadManager/DownloadManager-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "InfusionApps.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -547,9 +726,8 @@
 		};
 		0775100E18C617A900A7754B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C434396CBBA644199F1A57D7 /* Pods-DownloadManagerTests.xcconfig */;
+			baseConfigurationReference = D90412957FC41672AB348505 /* Pods-DownloadManagerTests.debug.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/DownloadManager.app/DownloadManager";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
@@ -568,7 +746,8 @@
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				INFOPLIST_FILE = "DownloadManagerTests/DownloadManagerTests-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "OmarAbdelhafith.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
@@ -577,9 +756,8 @@
 		};
 		0775100F18C617A900A7754B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C434396CBBA644199F1A57D7 /* Pods-DownloadManagerTests.xcconfig */;
+			baseConfigurationReference = E4A61679760ABB1113E10B94 /* Pods-DownloadManagerTests.release.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/DownloadManager.app/DownloadManager";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
@@ -603,7 +781,8 @@
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				INFOPLIST_FILE = "DownloadManagerTests/DownloadManagerTests-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "OmarAbdelhafith.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
@@ -617,25 +796,34 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
@@ -643,7 +831,7 @@
 		};
 		0775101118C65F4C00A7754B /* Testing */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B6957401EDE34E4685F72289 /* Pods.xcconfig */;
+			baseConfigurationReference = EC001694D5B4B3B859719551 /* Pods-DownloadManager.testing.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DownloadManager/DownloadManager-Prefix.pch";
@@ -653,6 +841,7 @@
 					"TESTING=1",
 				);
 				INFOPLIST_FILE = "DownloadManager/DownloadManager-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "InfusionApps.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -660,9 +849,8 @@
 		};
 		0775101218C65F4C00A7754B /* Testing */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C434396CBBA644199F1A57D7 /* Pods-DownloadManagerTests.xcconfig */;
+			baseConfigurationReference = 7BADDE894D10B7AE1AA6E418 /* Pods-DownloadManagerTests.testing.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/DownloadManager.app/DownloadManager";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
@@ -684,7 +872,8 @@
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				INFOPLIST_FILE = "DownloadManagerTests/DownloadManagerTests-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "OmarAbdelhafith.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;

@@ -13,7 +13,7 @@
 + (IASequentialDownloadHandler*) downloadingHandlerWithURLs:(NSArray*)urls
                                               progressBlock:(IASequentialProgressBlock)progressBlock
                                             completionBlock:(IASequentialCompletionBlock)completionBlock
-                                                        tag:(int)tag
+                                                        tag:(NSInteger)tag
 {
     IASequentialDownloadHandler *handler = [[IASequentialDownloadHandler alloc] init];
     
@@ -36,9 +36,9 @@
     return handler;
 }
 
-- (int) indexOfURL:(NSURL*)url
+- (NSInteger) indexOfURL:(NSURL*)url
 {
-    __block int index;
+    __block NSUInteger index;
     [self.urls enumerateObjectsUsingBlock:^(NSURL *blockURl, NSUInteger idx, BOOL *stop) {
         if([blockURl.absoluteString isEqualToString:url.absoluteString])
         {

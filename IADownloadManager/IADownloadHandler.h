@@ -14,13 +14,13 @@
 @property (nonatomic, strong) NSURL *url;
 @property (nonatomic, strong) IAProgressBlock progressBlock;
 @property (nonatomic, strong) IACompletionBlock completionBlock;
-@property (nonatomic, assign) int tag;
+@property (nonatomic, assign) NSInteger tag;
 @property (nonatomic, assign) id<IADownloadManagerDelegate> delegate;
 
 + (IADownloadHandler*) downloadingHandlerWithURL:(NSURL*)url
                                    progressBlock:(IAProgressBlock)progressBlock
                                  completionBlock:(IACompletionBlock)completionBlock
-                                             tag:(int)tag;
+                                             tag:(NSInteger)tag;
 
 + (IADownloadHandler*) downloadingHandlerWithURL:(NSURL*)url
                                         delegate:(id<IADownloadManagerDelegate>)delegate;

@@ -14,16 +14,16 @@
 @property (nonatomic, strong) IASequentialProgressBlock progressBlock;
 @property (nonatomic, strong) IASequentialCompletionBlock completionBlock;
 @property (nonatomic, strong) NSArray *urls;
-@property (nonatomic, assign) int tag;
+@property (nonatomic, assign) NSInteger tag;
 @property (nonatomic, weak) id<IASequentialDownloadManagerDelegate> delegate;
 
 + (IASequentialDownloadHandler*) downloadingHandlerWithURLs:(NSArray*)urls
                                               progressBlock:(IASequentialProgressBlock)progressBlock
                                             completionBlock:(IASequentialCompletionBlock)completionBlock
-                                                        tag:(int)tag;
+                                                        tag:(NSInteger)tag;
 
 + (IASequentialDownloadHandler*) downloadingHandlerWithURLs:(NSArray*)urls
                                                    delegate:(id<IASequentialDownloadManagerDelegate>)delegate;
 
-- (int) indexOfURL:(NSURL*)url;
+- (NSInteger) indexOfURL:(NSURL*)url;
 @end

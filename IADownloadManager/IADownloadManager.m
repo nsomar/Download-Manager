@@ -15,7 +15,7 @@
 @property (nonatomic, strong) NSMutableDictionary *downloadOperations;
 @property (nonatomic, strong) NSMutableDictionary *downloadHandlers;
 
-- (void)removeHandlerWithTag:(int)tag;
+- (void)removeHandlerWithTag:(NSInteger)tag;
 
 @end
 
@@ -112,7 +112,7 @@ void (^globalCompletionBlock)(BOOL success, id response, NSURL *url, IADownloadM
 
 - (void) attachNewHandlerWithProgressBlock:(IAProgressBlock)progressBlock
                            completionBlock:(IACompletionBlock)completionBlock
-                                       tag:(int)tag
+                                       tag:(NSInteger)tag
                                      toURL:(NSURL*)url
 {
     //unlink the tag from the urls
@@ -182,7 +182,7 @@ void (^globalCompletionBlock)(BOOL success, id response, NSURL *url, IADownloadM
     NSMutableArray *handlers = [self.downloadHandlers objectForKey:url];
     if (handlers)
     {
-        for (int i = handlers.count - 1; i >= 0; i-- )
+        for (NSUInteger i=0; i<handlers.count; i++ )
         {
             IADownloadHandler *handler = handlers[i];
             
@@ -199,7 +199,7 @@ void (^globalCompletionBlock)(BOOL success, id response, NSURL *url, IADownloadM
     NSMutableArray *handlers = [self.downloadHandlers objectForKey:url];
     if (handlers)
     {
-        for (int i = handlers.count - 1; i >= 0; i-- )
+        for (NSUInteger i=0; i<handlers.count; i++ )
         {
             IADownloadHandler *handler = handlers[i];
             
@@ -211,14 +211,14 @@ void (^globalCompletionBlock)(BOOL success, id response, NSURL *url, IADownloadM
     }
 }
 
-- (void)removeHandlerWithTag:(int)tag
+- (void)removeHandlerWithTag:(NSInteger)tag
 {
-    for (int i = self.downloadHandlers.allKeys.count - 1; i >= 0; i-- )
+    for (NSInteger i = self.downloadHandlers.allKeys.count - 1; i >= 0; i-- )
     {
         id key = self.downloadHandlers.allKeys[i];
         NSMutableArray *array = [self.downloadHandlers objectForKey:key];
         
-        for (int j = array.count - 1; j >= 0; j-- )
+        for (NSUInteger j=0; j<array.count; j++)
         {
             IADownloadHandler *handler = array[j];
             if (handler.tag == tag)
@@ -231,12 +231,12 @@ void (^globalCompletionBlock)(BOOL success, id response, NSURL *url, IADownloadM
 
 - (void)removeHandlerWithListener:(id)listener
 {
-    for (int i = self.downloadHandlers.allKeys.count - 1; i >= 0; i-- )
+    for (NSInteger i = self.downloadHandlers.allKeys.count - 1; i >= 0; i-- )
     {
         id key = self.downloadHandlers.allKeys[i];
         NSMutableArray *array = [self.downloadHandlers objectForKey:key];
         
-        for (int j = array.count - 1; j >= 0; j-- )
+        for (NSUInteger j=0; j<array.count; j++)
         {
             IADownloadHandler *handler = array[j];
             if (handler.delegate == listener)
@@ -281,7 +281,7 @@ void (^globalCompletionBlock)(BOOL success, id response, NSURL *url, IADownloadM
 {
     [[self instance] attachNewHandlerWithProgressBlock:progressBlock
                                        completionBlock:completionBlock
-                                                   tag:object ? (int)object : NSNotFound
+                                                   tag:object ? (NSInteger)object : NSNotFound
                                                  toURL:url];
 }
 
@@ -311,7 +311,7 @@ void (^globalCompletionBlock)(BOOL success, id response, NSURL *url, IADownloadM
     [[[self instance].downloadOperations objectForKey:url] stop];
 }
 
-+ (int)listenerCountForUrl:(NSURL *)url
++ (NSUInteger)listenerCountForUrl:(NSURL *)url
 {
     NSMutableArray *handlers = [[self instance].downloadHandlers objectForKey:url];
     return handlers.count;

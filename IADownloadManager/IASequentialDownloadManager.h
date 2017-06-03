@@ -8,12 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
-typedef void (^IASequentialProgressBlock)(float progress, int index);
-typedef void (^IASequentialCompletionBlock)(BOOL success, id response, int index);
+typedef void (^IASequentialProgressBlock)(float progress, NSInteger index);
+typedef void (^IASequentialCompletionBlock)(BOOL success, id response, NSInteger index);
 
 @protocol IASequentialDownloadManagerDelegate <NSObject>
-- (void) sequentialManagerProgress:(float)progress atIndex:(int)index;
-- (void) sequentialManagerDidFinish:(BOOL)success response:(id)response atIndex:(int)index;
+- (void) sequentialManagerProgress:(float)progress atIndex:(NSInteger)index;
+- (void) sequentialManagerDidFinish:(BOOL)success response:(id)response atIndex:(NSInteger)index;
 @end
 
 @interface IASequentialDownloadManager : NSObject
