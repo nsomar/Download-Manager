@@ -60,7 +60,7 @@ void (^globalSequentialProgressBlock)
     NSMutableArray *handlers = [self.downloadHandlers objectForKey:urls];
     //Inform the handlers
     int remainingDownloads = [[self.remainingDownloads objectForKey:urls] intValue];
-    int index = urls.count - remainingDownloads;
+    NSInteger index = urls.count - remainingDownloads;
     
     [handlers enumerateObjectsUsingBlock:^(IASequentialDownloadHandler *handler,
                                            NSUInteger idx, BOOL *stop) {
@@ -93,7 +93,7 @@ bool hasDuplicateUrls(NSArray* urls)
     return NO;
 }
 
-int indexOfURL(NSURL *url, NSArray* urls)
+NSInteger indexOfURL(NSURL *url, NSArray* urls)
 {
     for(int j = 0 ; j < [urls count] ; j++)
     {
@@ -118,7 +118,7 @@ void (^globalSequentialCompletionBlock)
     NSMutableArray *handlers = [self.downloadHandlers objectForKey:urls];
     //Inform the handlers
     int remainingDownloads = [[self.remainingDownloads objectForKey:urls] intValue];
-    int index = hasDuplicateUrls(urls) ? urls.count - remainingDownloads :
+    NSInteger index = hasDuplicateUrls(urls) ? urls.count - remainingDownloads :
     indexOfURL(url, urls);
     
     remainingDownloads--;
@@ -232,7 +232,7 @@ void (^globalSequentialCompletionBlock)
     NSMutableArray *handlers = [self.downloadHandlers objectForKey:urls];
     if (handlers)
     {
-        for (int i = handlers.count - 1; i >= 0; i-- )
+        for (NSUInteger i=0; i<handlers.count; i++ )
         {
             IASequentialDownloadHandler *handler = handlers[i];
             
@@ -249,7 +249,7 @@ void (^globalSequentialCompletionBlock)
     NSMutableArray *handlers = [self.downloadHandlers objectForKey:urls];
     if (handlers)
     {
-        for (int i = handlers.count - 1; i >= 0; i-- )
+        for (NSUInteger i=0; i<handlers.count; i++ )
         {
             IASequentialDownloadHandler *handler = handlers[i];
             
@@ -263,12 +263,12 @@ void (^globalSequentialCompletionBlock)
 
 - (void)removeAllHandlersWithListener:(id)listener
 {
-    for (int i = self.downloadHandlers.allKeys.count - 1; i >= 0; i-- )
+    for (NSInteger i =0; i < self.downloadHandlers.allKeys.count; i++ )
     {
         id key = self.downloadHandlers.allKeys[i];
         NSMutableArray *array = [self.downloadHandlers objectForKey:key];
         
-        for (int j = array.count - 1; j >= 0; j-- )
+        for (NSUInteger j=0; j<array.count; j++ )
         {
             IASequentialDownloadHandler *handler = array[j];
             if (handler.delegate == listener)
@@ -281,12 +281,12 @@ void (^globalSequentialCompletionBlock)
 
 - (void)removeHandlerWithTag:(int)tag
 {
-    for (int i = self.downloadHandlers.allKeys.count - 1; i >= 0; i-- )
+    for (NSInteger i =0; i < self.downloadHandlers.allKeys.count; i++ )
     {
         id key = self.downloadHandlers.allKeys[i];
         NSMutableArray *array = [self.downloadHandlers objectForKey:key];
         
-        for (int j = array.count - 1; j >= 0; j-- )
+        for (NSUInteger j=0; j<array.count; j++ )
         {
             IASequentialDownloadHandler *handler = array[j];
             if (handler.tag == tag)

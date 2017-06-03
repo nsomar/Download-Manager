@@ -13,7 +13,7 @@
 + (IADownloadHandler*) downloadingHandlerWithURL:(NSURL*)url
                                    progressBlock:(IAProgressBlock)progressBlock
                                  completionBlock:(IACompletionBlock)completionBlock
-                                             tag:(int)tag
+                                             tag:(NSInteger)tag
 {
     IADownloadHandler *handler = [IADownloadHandler new];
     handler.url = url;
