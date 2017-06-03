@@ -87,7 +87,7 @@
         }
         else
         {
-            [IADownloadOperation setCacheWithData:[NSData dataWithContentsOfFile:filePath.absoluteString] url:url];
+            [IADownloadOperation setCacheWithData:[NSData dataWithContentsOfFile:filePath.path] url:url];
             __strong IADownloadOperation *StrongT = weakT;
             if(StrongT != nil && StrongT->_tempFilePath && StrongT->_finalFilePath)
             {
@@ -96,7 +96,7 @@
                 [[NSFileManager defaultManager] moveItemAtPath:StrongT->_tempFilePath toPath:StrongT->_finalFilePath error:&error];
             }
             [StrongT finish];
-            completionBlock(YES, [NSData dataWithContentsOfFile:filePath.absoluteString]);
+            completionBlock(YES, [NSData dataWithContentsOfFile:filePath.path]);
         }
     }];
     
